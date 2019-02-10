@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="text/javascript" src="./script/script.js"></script>
+    <title>Pizza Maker</title>
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1><i class="fas fa-pizza-slice"></i>The Pizza Place</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Size</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pick a size.</h5>
+                        <ul>
+                            <li><input type="radio" name="size" value="Personal">Personal</li>
+                            <li><input type="radio" name="size" value="Medium">Medium</li>
+                            <li><input type="radio" name="size" value="Large" checked>Large</li>
+                            <li><input type="radio" name="size" value="Extra-Large">Extra-Large</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Meats</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Base price includes on meat topping, additional toppings <price>$1</price>
+                        </h5>
+                        <ul>
+                            <li><input type="checkbox" name="meats" value="Pepperoni">Pepperoni</li>
+                            <li><input type="checkbox" name="meats" value="Sausage">Sausage</li>
+                            <li><input type="checkbox" name="meats" value="Canadian Bacon">Canadian Bacon</li>
+                            <li><input type="checkbox" name="meats" value="Ground Beef">Ground Beef</li>
+                            <li><input type="checkbox" name="meats" value="Anchovy">Anchovy</li>
+                            <li><input type="checkbox" name="meats" value="Chicken">Chicken</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Cheese</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <ul>
+                            <li><input type="radio" name="cheese" value="Regular Cheese" checked>Regular</li>
+                            <li><input type="radio" name="cheese" value="Extra Cheese">Extra</li>
+                            <li><input type="radio" name="cheese" value="No Cheese">No-Cheese</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Crust</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <ul>
+                            <li><input type="radio" name="crust" value="Plain Crust" checked>Plain Crust</li>
+                            <li><input type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter Crust</li>
+                            <li><input type="radio" name="crust" value="Stuffed Crust">Cheese Stuffed Crust&reg;</li>
+                            <li><input type="radio" name="crust" value="Spicy Crust">Spicy Crust</li>
+                            <li><input type="radio" name="crust" value="House Special Crust">House Special Crust</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Sauce</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <ul>
+                            <li><input type="radio" name="sauce" value="Marinara" checked>Marinara</li>
+                            <li><input type="radio" name="sauce" value="White Sauce">White Sauce</li>
+                            <li><input type="radio" name="sauce" value="BBQ Sauce">Barbeque Sauce</li>
+                            <li><input type="radio" name="sauce" value="No Sauce">No Sauce</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Veggies</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <ul>
+                            <li><input type="checkbox" name="veggies" value="Tomatoes">Tomatoes</li>
+                            <li><input type="checkbox" name="veggies" value="Sausage">Onions</li>
+                            <li><input type="checkbox" name="veggies" value="Black Olives">Black Olives</li>
+                            <li><input type="checkbox" name="veggies" value="Mushrooms">Mushrooms</li>
+                            <li><input type="checkbox" name="veggies" value="Pineapple">Pineapple</li>
+                            <li><input type="checkbox" name="veggies" value="Spinach">Spinach</li>
+                            <li><input type="checkbox" name="veggies" value="Jalapeno">Jalapeno</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Submit and Clear-->
+        <div>
+            <button type="button" onclick="makePizza()" class="btn btn-primary btn-lg btn-block" name="Submit" id="submit">Place Order</button>
+            <span><button type="button" class="btn btn-secondary btn-lg btn-block" name="cancel">Cancel</button></span>
+        </div>
+
+        <!--Receipt-->
+        <div class="row">
+            <div class="col-lg">
+                <div class="card bg-light mb-3">
+                    <h1>Receipt</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

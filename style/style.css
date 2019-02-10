@@ -1,0 +1,34 @@
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+
+body {
+  margin: 0 auto;
+  max-width: none;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  color: #566b78;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  top: 28%;
+  z-index: 4;
+  text-align: center;
+  max-width: 1280px;
+  padding: 30px 200px;
+}
+
+input {
+    margin-right: 10px;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+}
+
+price {
+    color: indianred;
+}
