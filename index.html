@@ -96,7 +96,7 @@
                             <h5 class="card-title">Light card title</h5>
                             <ul>
                                 <li><input type="radio" name="cheese" value="Regular Cheese" data-price="0" checked>Regular</li>
-                                <li><input type="radio" name="cheese" value="Extra Cheese" data-price="300">Extra</li>
+                                <li><input type="radio" name="cheese" value="Extra Cheese" data-price="300">Extra Cheese</li>
                                 <li><input type="radio" name="cheese" value="No Cheese" data-price="0">No-Cheese</li>
                             </ul>
                         </div>
@@ -119,9 +119,9 @@
             </div>
             <!--Submit and Clear-->
             <div>
-                <button type="button" onclick="tableCreate()" class="btn btn-primary btn-lg btn-block" name="Submit" id="submit">Place
+                <button type="button" onclick="$('tbody').empty(); $('#total').empty(); tableCreate()" class="btn btn-primary btn-lg btn-block" name="Submit" id="submit">Place
                     Order</button>
-                <span><button type="button" onclick="this.form.reset();" class="btn btn-secondary btn-lg btn-block"
+                <span><button type="button" onclick="this.form.reset(); $('tbody').empty(); $('#total').empty();" class="btn btn-secondary btn-lg btn-block"
                         name="cancel">Cancel</button></span>
             </div>
         </form>
@@ -129,40 +129,23 @@
 
         <!--Receipt-->
         <div class="row">
-            <div class="col-lg">
+            <div class="col-md">
                 <div class="card bg-light mb-3">
                     <h1>Receipt</h1>
                 </div>
-                <table class="table" id="receipt">
-                    <caption>List of users</caption>
+                <table class="table table-borderless" id="receipt">
+                    <caption class="table-info">Total: 
+                    <span id="total"></span>
+                    </caption>
                     <thead>
                         <tr>
-                            <th scope="col"></th>
                             <th scope="col">Item</th>
                             <th scope="col">Price</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
 
+                    </tbody>
                 </table>
             </div>
         </div>

@@ -1,30 +1,40 @@
-function makePizza() {
+function getHTMLElements() {
   var fieldNames = ['size', 'crust', 'cheese', 'sauce', 'meats', 'veggies']
   var myPizza = Object.create(null)
   for (var i = 0; i < fieldNames.length; i++) {
     var fields = document.getElementsByName(fieldNames[i])
-    var pizzaToppings = []
+    var pizzaToppingHTMLElement = []
     for (var j = 0; j < fields.length; j++) {
       if (fields[j].checked) {
-        pizzaToppings.push(new Object('{' + fieldNames[i] + ': ' + fields[j].value + ', price: ' + fields[j].dataset.price + '};'))
+        pizzaToppingHTMLElement.push(fields[j])
       }
     }
-    myPizza[fieldNames[i]] = pizzaToppings
+    myPizza[fieldNames[i]] = pizzaToppingHTMLElement
   }
   return myPizza
 }
 
-
-
 function tableCreate() {
-  var varPizza = makePizza()
+  var varPizza = getHTMLElements()
   var fieldNames = ['size', 'crust', 'cheese', 'sauce', 'meats', 'veggies']
   var table = $('#receipt')
+  var total = 0
   for (var field of fieldNames) {
-    console.log(varPizza[field])
-    for (var topping of varPizza[field]) {
-      var row = $('<tr/>').addClass('pizza').html('<td>' + topping[field] + '</td>' + '<td>' + topping[price] + '</td>')
-      table.append(row)
+    for (var i = 0; i < varPizza[field].length; i++) {
+      var row
+      var price
+      if (((field === 'meats' || field === 'veggies') && (i == 0))) {
+        price = parseFloat(Math.round(0) / 100).toFixed(2)
+        total += parseFloat(price)
+        row = $('<tr/>').addClass('toppings').html('<td>' + varPizza[field][i].value + '</td>' + '<td>$' + price + '</td>')
+        table.append(row)
+      } else {
+        price = parseFloat(Math.round(varPizza[field][i].dataset.price) / 100).toFixed(2)
+        total += parseFloat(price)
+        row = $('<tr/>').addClass('toppings').html('<td>' + varPizza[field][i].value + '</td>' + '<td>$' + price + '</td>')
+        table.append(row)
+      }
     }
   }
+  $('#total').append(total.toFixed(2))
 }
