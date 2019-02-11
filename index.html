@@ -21,106 +21,111 @@
         </div>
     </header>
     <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Size</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Pick a size.</h5>
-                        <ul>
-                            <li><input type="radio" name="size" value="Personal">Personal</li>
-                            <li><input type="radio" name="size" value="Medium">Medium</li>
-                            <li><input type="radio" name="size" value="Large" checked>Large</li>
-                            <li><input type="radio" name="size" value="Extra-Large">Extra-Large</li>
-                        </ul>
+        <form action="#" name="pizza_order">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Size</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pick a size.</h5>
+                            <ul>
+                                <li><input type="radio" name="size" value="Personal" data-price="600">Personal</li>
+                                <li><input type="radio" name="size" value="Medium" data-price="1000">Medium</li>
+                                <li><input type="radio" name="size" value="Large" checked data-price="1400">Large</li>
+                                <li><input type="radio" name="size" value="Extra-Large" data-price="1600">Extra-Large</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Meats</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Base price includes on meat topping, additional toppings <price>$1</price>
-                        </h5>
-                        <ul>
-                            <li><input type="checkbox" name="meats" value="Pepperoni">Pepperoni</li>
-                            <li><input type="checkbox" name="meats" value="Sausage">Sausage</li>
-                            <li><input type="checkbox" name="meats" value="Canadian Bacon">Canadian Bacon</li>
-                            <li><input type="checkbox" name="meats" value="Ground Beef">Ground Beef</li>
-                            <li><input type="checkbox" name="meats" value="Anchovy">Anchovy</li>
-                            <li><input type="checkbox" name="meats" value="Chicken">Chicken</li>
-                        </ul>
+                <div class="col-sm">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Meats</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Base price includes on meat topping, additional toppings <price>$1</price>
+                            </h5>
+                            <ul>
+                                <li><input type="checkbox" name="meats" value="Pepperoni" data-price="100">Pepperoni</li>
+                                <li><input type="checkbox" name="meats" value="Sausage" data-price="100">Sausage</li>
+                                <li><input type="checkbox" name="meats" value="Canadian Bacon" data-price="100">Canadian Bacon</li>
+                                <li><input type="checkbox" name="meats" value="Ground Beef" data-price="100">Ground Beef</li>
+                                <li><input type="checkbox" name="meats" value="Anchovy" data-price="100">Anchovy</li>
+                                <li><input type="checkbox" name="meats" value="Chicken" data-price="100">Chicken</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm">
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Cheese</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Light card title</h5>
-                        <ul>
-                            <li><input type="radio" name="cheese" value="Regular Cheese" checked>Regular</li>
-                            <li><input type="radio" name="cheese" value="Extra Cheese">Extra</li>
-                            <li><input type="radio" name="cheese" value="No Cheese">No-Cheese</li>
-                        </ul>
+                <div class="col-sm">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Veggies</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <ul>
+                                <li><input type="checkbox" name="veggies" value="Tomatoes" data-price="100">Tomatoes</li>
+                                <li><input type="checkbox" name="veggies" value="Sausage" data-price="100">Onions</li>
+                                <li><input type="checkbox" name="veggies" value="Black Olives" data-price="100">Black Olives</li>
+                                <li><input type="checkbox" name="veggies" value="Mushrooms" data-price="100">Mushrooms</li>
+                                <li><input type="checkbox" name="veggies" value="Pineapple" data-price="100">Pineapple</li>
+                                <li><input type="checkbox" name="veggies" value="Spinach" data-price="100">Spinach</li>
+                                <li><input type="checkbox" name="veggies" value="Jalapeno" data-price="100">Jalapeno</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Crust</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Light card title</h5>
-                        <ul>
-                            <li><input type="radio" name="crust" value="Plain Crust" checked>Plain Crust</li>
-                            <li><input type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter Crust</li>
-                            <li><input type="radio" name="crust" value="Stuffed Crust">Cheese Stuffed Crust&reg;</li>
-                            <li><input type="radio" name="crust" value="Spicy Crust">Spicy Crust</li>
-                            <li><input type="radio" name="crust" value="House Special Crust">House Special Crust</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Sauce</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Light card title</h5>
-                        <ul>
-                            <li><input type="radio" name="sauce" value="Marinara" checked>Marinara</li>
-                            <li><input type="radio" name="sauce" value="White Sauce">White Sauce</li>
-                            <li><input type="radio" name="sauce" value="BBQ Sauce">Barbeque Sauce</li>
-                            <li><input type="radio" name="sauce" value="No Sauce">No Sauce</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card bg-light mb-3">
-                    <div class="card-header">Veggies</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Light card title</h5>
-                        <ul>
-                            <li><input type="checkbox" name="veggies" value="Tomatoes">Tomatoes</li>
-                            <li><input type="checkbox" name="veggies" value="Sausage">Onions</li>
-                            <li><input type="checkbox" name="veggies" value="Black Olives">Black Olives</li>
-                            <li><input type="checkbox" name="veggies" value="Mushrooms">Mushrooms</li>
-                            <li><input type="checkbox" name="veggies" value="Pineapple">Pineapple</li>
-                            <li><input type="checkbox" name="veggies" value="Spinach">Spinach</li>
-                            <li><input type="checkbox" name="veggies" value="Jalapeno">Jalapeno</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!--Submit and Clear-->
-        <div>
-            <button type="button" onclick="makePizza()" class="btn btn-primary btn-lg btn-block" name="Submit" id="submit">Place Order</button>
-            <span><button type="button" class="btn btn-secondary btn-lg btn-block" name="cancel">Cancel</button></span>
-        </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Crust</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <ul>
+                                <li><input type="radio" name="crust" value="Plain Crust" data-price="0" checked>Plain Crust</li>
+                                <li><input type="radio" name="crust" value="Garlic Butter Crust" data-price="0">Garlic Butter Crust</li>
+                                <li><input type="radio" name="crust" value="Stuffed Crust" data-price="300">Cheese Stuffed Crust&reg;</li>
+                                <li><input type="radio" name="crust" value="Spicy Crust" data-price="0">Spicy Crust</li>
+                                <li><input type="radio" name="crust" value="House Special Crust" data-price="0">House Special Crust</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Cheese</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <ul>
+                                <li><input type="radio" name="cheese" value="Regular Cheese" data-price="0" checked>Regular</li>
+                                <li><input type="radio" name="cheese" value="Extra Cheese" data-price="300">Extra</li>
+                                <li><input type="radio" name="cheese" value="No Cheese" data-price="0">No-Cheese</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Sauce</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <ul>
+                                <li><input type="radio" name="sauce" value="Marinara" data-price="0" checked>Marinara</li>
+                                <li><input type="radio" name="sauce" value="White Sauce" data-price="0">White Sauce</li>
+                                <li><input type="radio" name="sauce" value="BBQ Sauce" data-price="0">Barbeque Sauce</li>
+                                <li><input type="radio" name="sauce" value="No Sauce" data-price="0">No Sauce</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Submit and Clear-->
+            <div>
+                <button type="button" onclick="tableCreate()" class="btn btn-primary btn-lg btn-block" name="Submit" id="submit">Place
+                    Order</button>
+                <span><button type="button" onclick="this.form.reset();" class="btn btn-secondary btn-lg btn-block"
+                        name="cancel">Cancel</button></span>
+            </div>
+        </form>
+
 
         <!--Receipt-->
         <div class="row">
@@ -128,6 +133,37 @@
                 <div class="card bg-light mb-3">
                     <h1>Receipt</h1>
                 </div>
+                <table class="table" id="receipt">
+                    <caption>List of users</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+
+                </table>
             </div>
         </div>
     </div>
